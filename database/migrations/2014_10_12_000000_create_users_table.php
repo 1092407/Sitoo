@@ -14,13 +14,21 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email')->unique();
+             $table->bigIncrements('id')->index();
+            $table->string('foto_profilo')->nullable();
+            $table->string('name'); //Non modifico il nome della colonna perchè potrei avere problemi di funzionamento di processi che ne fanno uso
+            $table->string('cognome');
+            $table->string('sesso');
+            $table->date('data_nascita');
+            $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('username')->unique();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+
+
+            $table->string('descrizione');
+            $table->rememberToken();//Definisce nella tabella una colonna per gestire la condizione di remember
+            $table->timestamps();// Definisce due colonne che indicano la data di creazione della tupla e di ultima modifica
         });
     }
 

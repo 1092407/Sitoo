@@ -28,6 +28,18 @@ Route::view('/Regolamento','termini_condizioni')->name('termini_condizioni'); //
 Route::get('/', 'PublicController@showHomepage')->name('home'); // per aprire home page
 
 
+//ROTTE ADMIN
+//Route::get('/Admin','AdminController@index')->name('admin')->middleware('can:isAdmin');
+//Route::post('/Admin','AdminController@showStatistiche')->name('adminfilter');
+
+Route::view('/Admin','adminGESTIONE')->name('admin');
+
+
+
+
+
+
+
 
 //Sottoinsime di Auth::routes()
 Route::get('login','Auth\LoginController@showLoginForm')->name('login')->middleware('guest'); //Rotta che genera la form GET
