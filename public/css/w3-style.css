@@ -1888,7 +1888,7 @@ ul.social-media-list img:hover {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url("../img/sfondo_tagliato.png");
+    background-image: url("../img/sfondopubblicotagliato.jpg");
     min-height: 60%;
     min-width: 100%;
 }
@@ -2371,7 +2371,7 @@ textarea {
     border-collapse: collapse;
     width: 100%;
   }
-  
+
 .table-input-alloggio tr,
 .table-input-alloggio td{
     padding: 8px;

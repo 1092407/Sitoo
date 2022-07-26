@@ -50,9 +50,17 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'foto_profilo' => ['sometimes','file', 'mimes:jpeg,png', 'max:5000'],
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'cognome' => ['required', 'string', 'max:255'],
+            'sesso' => ['required', 'string'],
+            'data_nascita' => ['required', 'date','before:18 years ago'],
+            'email' => ['required', 'string', 'unique:users', 'regex:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/'],
+            'username' => ['required', 'string', 'min:8', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+
+
+            'descrizione' => ['required ','string','max:2500']
         ]);
     }
 
@@ -64,10 +72,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+         if (request()->hasFile('foto_profilo')) {
+            $image = request()->file('foto_profilo');
+            $imageName = $image->getClientOriginalName();
+            $destinationPath = public_path().'/img/foto_profilo';
+            $image->move($destinationPath, $imageName);
+        } else {
+            $imageName = NULL;
+        }
         return User::create([
+            'foto_profilo' => $imageName,
             'name' => $data['name'],
+            'cognome' => $data['cognome'],
+            'sesso' => $data['sesso'],
+            'data_nascita' => $data['data_nascita'],
             'email' => $data['email'],
+            'username' => $data['username'],
             'password' => Hash::make($data['password']),
+
+
+            'descrizione' => $data['descrizione']
         ]);
+
     }
 }
