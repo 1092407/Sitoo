@@ -58,8 +58,8 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'unique:users', 'regex:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/'],
             'username' => ['required', 'string', 'min:8', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-
-
+            // penso che livello non vada messo perchè non è un campo che compare nella form di registrazione
+            //infatti voglio mettere che livello=utente di default per chi si registra tramite la viwe registrazione
             'descrizione' => ['required ','string','max:2500']
         ]);
     }
@@ -89,7 +89,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
-
+             'livello' == 'utente',             // lo voglio per default per chi si registra tramite questa pagina: l'admin infatti lo preregistro nel db con i seeds e i membri dello staff li registro tramite la sezione riservata dell'admin
 
             'descrizione' => $data['descrizione']
         ]);

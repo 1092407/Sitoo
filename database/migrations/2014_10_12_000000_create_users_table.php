@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('username')->unique();
             $table->string('password');
-
+            $table->string('livello');  //mi serve per generare le corrette home private dopo i login
 
             $table->string('descrizione');
             $table->rememberToken();//Definisce nella tabella una colonna per gestire la condizione di remember
