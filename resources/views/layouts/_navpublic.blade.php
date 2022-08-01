@@ -14,8 +14,8 @@
 
 
 
-        <a href="{{route('cosa')}}" class="w3-bar-item w3-button w3-hide-small" title="Cosa offriamo"><i class="fa fa-info-circle"></i> Servizio</a>
-        <a href="{{route('chi')}}" class="w3-bar-item w3-button w3-hide-small" title="Il nostro profilo aziendale"><i class="fa fa-users"></i> Chi Siamo</a>
+        <a href="{{route('cosa')}}" class="w3-bar-item w3-button w3-hide-small" title="Cosa offriamo con blo"><i class="fa fa-info-circle"></i> Servizio</a>
+        <a href="{{route('chi')}}" class="w3-bar-item w3-button w3-hide-small" title="scopri chi sono i creatori della comunità"><i class="fa fa-users"></i> Chi Siamo</a>
         <a href="{{route('dove')}}" class="w3-bar-item w3-button w3-hide-small" title="Dove trovarci"><i class="fa fa-map-marker"></i> Dove Trovarci</a>
 
         <a href="mailto:info@blo.it" class="w3-bar-item w3-button w3-hide-small" title="Mandaci un messaggio"><i class="fa fa-envelope"></i> Contattaci</a>

@@ -32,8 +32,19 @@ Route::get('/', 'PublicController@showHomepage')->name('home'); // per aprire ho
 //Route::get('/Admin','AdminController@index')->name('admin')->middleware('can:isAdmin');
 //Route::post('/Admin','AdminController@showStatistiche')->name('adminfilter');
 
-Route::view('/Admin','adminGESTIONE')->name('admin');
+Route::view('/Admin','homeadmin')->name('admin');   // porta alla homepage riservata all'admin
+Route::view('/statistiche','statistiche')->name('statistiche');  // porta alla view che visualizza le statistiche
+Route::view('/gestionestaff ','gestionestaff')->name('gestione');  // porta alla vista che mi fa gestire i membri dello staff
 
+
+
+
+
+//ROTTE STAFF
+
+Route::view('/Staff','homestaff')->name('staff');   // porta alla homepage riservata ai membri dello staff
+Route::view('/messaggi','messaggi')->name('messaggi');  // porta alla view che visualizza la pagina dove vedo i messaggi
+Route::view('/gestioneblog ','gestioneblog')->name('gestioneblog');  // porta alla vista che mi fa controllare i contenuti dei blog e post degli utenti
 
 
 
