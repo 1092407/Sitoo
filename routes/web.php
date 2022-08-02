@@ -46,9 +46,17 @@ Route::view('/Staff','homestaff')->name('staff');   // porta alla homepage riser
 Route::view('/messaggi','messaggi')->name('messaggi');  // porta alla view che visualizza la pagina dove vedo i messaggi
 Route::view('/gestioneblog ','gestioneblog')->name('gestioneblog');  // porta alla vista che mi fa controllare i contenuti dei blog e post degli utenti
 
+//ROTTE UTENTE
 
 
+Route::view('/Utente','homeutente')->name('utente');   // porta alla homepage riservata agli utenti del sito
+Route::view('/messaggi','messaggi')->name('messaggi');  // porta alla view che visualizza la pagina dove vedo i messaggi
+Route::view('/Blog ','mioblog')->name('mioblog');  // porta alla vista che mi fa vedere i miei blog
+Route::view('/Amici','mioamico')->name('amici');   // porta alla homepage riservata agli utenti del sito
+Route::view('/Cercapersone','cercapersone')->name('cerca');  // porta alla view che visualizza la pagina dove cerco potenziali amici
+Route::view('/Profilo ','mioprofilo')->name('profilo');  // porta alla vista che mi fa vedere tutti i dati relativi al mio profilo
 
+//mettere contattaci
 
 
 

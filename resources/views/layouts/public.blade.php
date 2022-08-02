@@ -34,7 +34,7 @@
 
         <footer class="w3-center w3-black w3-padding-16" style='bottom:0px;'>
             blo | Via Brecce Bianche, 12 - 60131 Ancona (AN) ITALIA<br>
-            <a  href="mailto:info@blo.it">info@blo.it</a> | <span itemprop="telephone">CELLULARE NUM</span>
+            <a  href="mailto:info@blo.it">info@blo.it</a> | <span itemprop="telephone"> +39 0734 / 746893</span>
             <br><a href="{{route('privacy')}}"> Privacy e Cookie Policy</a> | <a href="{{route('termini_condizioni')}}"> Termini e Condizioni </a>
             <ul class="social-media-list">
                     <li><a target="_blank" href="https://www.facebook.com/"><img src="{{asset('img/social/facebook.png')}}"  title="Facebook" alt="Facebook icon"></a></li>
