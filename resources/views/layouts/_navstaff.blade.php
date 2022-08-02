@@ -4,7 +4,7 @@
 
          <a href="{{route('staff')}}" class="w3-bar-item w3-button w3-hide-small" title=" torna alla tua home staff"><i class="fa fa-home"></i> HOME STAFF</a>
         <a href="{{route('messaggi')}}" class="w3-bar-item w3-button w3-hide-small" title="controlla i tuoi messaggi tuoi messaggi"><i class="fa fa-telegram"></i> I tuoi messaggi  </a>
-      <a href="{{route('gestioneblog')}}" class="w3-bar-item w3-button w3-hide-small" title="controlla i blog presenti nella comunità"><i class="fa fa-list"></i> Gestisci Blog</a>
+      <a href="{{route('gestisciblog')}}" class="w3-bar-item w3-button w3-hide-small" title="controlla i blog presenti nella comunità"><i class="fa fa-list"></i> Gestisci Blog</a>
 
 
 
