@@ -89,7 +89,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
-             'livello' == 'utente',             // lo voglio per default per chi si registra tramite questa pagina: l'admin infatti lo preregistro nel db con i seeds e i membri dello staff li registro tramite la sezione riservata dell'admin
+            // 'livello' == 'utente',             // lo voglio per default per chi si registra tramite questa pagina: l'admin infatti lo preregistro nel db con i seeds e i membri dello staff li registro tramite la sezione riservata dell'admin
 // non so se la sintassi corretta sia == 0 =>  DA CONTROLLARE
             'descrizione' => $data['descrizione']
         ]);
