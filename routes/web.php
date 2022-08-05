@@ -25,20 +25,40 @@ Route::view('/Cosa','cosa')->name('cosa');  // per la vista informazioni sul ser
 Route::view('/Privacy','privacy_cookies')->name('privacy'); // per la vista sulle info relative alla privacy
 Route::view('/Regolamento','termini_condizioni')->name('termini_condizioni'); // per la vista relativa ai termini di condizioni
 
-Route::get('/', 'PublicController@showHomepage')->name('home'); // per aprire home page
+Route::get('/', 'PublicController@showHomepage')->name('home'); // per aprire home page pubblica
 
 
 //ROTTE ADMIN
 //Route::get('/Admin','AdminController@index')->name('admin')->middleware('can:isAdmin');
 //Route::post('/Admin','AdminController@showStatistiche')->name('adminfilter');
 
-Route::view('/Admin','adminGESTIONE')->name('admin');
+Route::view('/Admin','homeadmin')->name('admin');   // porta alla homepage riservata all'admin
+Route::view('/statistiche','statistiche')->name('statistiche');  // porta alla view che visualizza le statistiche
+Route::view('/Gestionestaff','gestionestaff')->name('gestiscistaff');// porta alla vista che mi fa gestire i membri dello staff
 
 
 
 
 
+//ROTTE STAFF
 
+Route::view('/Staff','homestaff')->name('staff');   // porta alla homepage riservata ai membri dello staff
+Route::view('/Messaggi','messaggi')->name('messaggi');  // porta alla view che visualizza la pagina dove vedo i messaggi
+  Route::view('/Gestioneblog','gestioneblog')->name('gestisciblog');// porta alla vista che mi fa controllare i contenuti dei blog e post degli utenti
+
+
+
+//ROTTE UTENTE
+
+Route::view('/Utente','homeutente')->name('utente');   // porta alla homepage riservata agli utenti del sito
+Route::view('/messaggi','messaggi')->name('messaggi');  // porta alla view che visualizza la pagina dove vedo i messaggi
+ Route::view('/Blog','mioblog')->name('miooblog');// porta alla vista che mi fa vedere i miei blog
+Route::view('/Amici','mioamico')->name('amici');   // porta alla homepage riservata agli utenti del sito
+Route::view('/Cercapersone','cercapersone')->name('cerca');  // porta alla view che visualizza la pagina dove cerco potenziali amici
+Route::view('/Profilo','profiloutente')->name('profilo');  // porta alla vista che mi fa vedere tutti i dati relativi al mio profilo
+
+
+Route::view('/Blog','mioblog')->name('miooblog');
 
 
 //Sottoinsime di Auth::routes()

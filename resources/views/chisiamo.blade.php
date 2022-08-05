@@ -20,14 +20,14 @@
   <p><b>Semplice e veloce offre un  servizio ideale per i giovani  e non solo .</b></p>
 </div>
 <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16" align="center"><b>La Nostra Missione</b></h2>
-<p>Il nostro scopo è quello di offrire un servizio di svago ma anche di condivisione .<br>
+<p>Il nostro scopo è quello di offrire un servizio di svago ma anche di utile condivisione di idee e pensieri .<br>
   Il nostro punto di forza è il facile utilizzo della piattaforma , che migliorerà  di certo le tue giornate di stressante lavoro o studio .
   Questo è uno dei grandi scopi che ci siamo prefissati.<br>
   Mettete a disposizione i vostri pensieri... al resto ci pensiamo noi!
 </p>
 <div class="w3-row-padding ">
   <div class="w3-col l3 m6 w3-margin-bottom w3-grayscale hover-no-filter transition">
-    <img src="{{asset('img/profilo/gustavo.png')}}" alt="Mariuc" style="width:100%" class='thumb'> // mettere foto
+    <img src="{{asset('img/profilo/fil.jpg')}}" alt="Mariuc" style="width:120%" class='thumb'>
     <h3>Filippo Mariucci</h3>
     <p class="w3-opacity">Developer</p>
     <p>Studente di Ingegneria Informatica e dell'Automazione presso l'Università Politecnica delle Marche.</p>
@@ -36,7 +36,7 @@
     </p>
   </div>
   <div class="w3-col l3 m6 w3-margin-bottom w3-grayscale hover-no-filter transition">
-    <img src="{{asset('img/profilo/howard.png')}}" alt="Giorgione" style="width:100%" class='thumb'> // mettere foto
+    <img src="{{asset('img/profilo/gio.jpg')}}" alt="Giorgione" style="width:110%" class='thumb'>
     <h3>Giorgio Olivieri</h3>
     <p class="w3-opacity">Developer</p>
     <p>Studente di Ingegneria Informatica e dell'Automazione presso l'Università Politecnica delle Marche.</p>
